@@ -1,0 +1,5 @@
+fetch('/api/legal').then(async r=>{if(!r.ok)throw Error();return r.json()}).then(({documents,configured})=>{
+ const status=document.getElementById('legalStatus');
+ status.textContent=configured?'No se detectan campos [COMPLETAR]. Esta señal no certifica cumplimiento; confirma que los textos reflejen las prácticas reales y la normativa vigente.':'Borradores legales: faltan datos y políticas reales del negocio. La tienda aún no está lista para operar ni procesar pagos.';
+ for(const d of documents){const article=document.getElementById(d.slug);if(!article)continue;article.querySelector('h2').textContent=d.title;const root=article.querySelector('.legal-body');root.replaceChildren();for(const block of String(d.body).split(/\n\s*\n/).filter(Boolean)){const p=document.createElement('p'),parts=block.split('\n');parts.forEach((line,i)=>{if(i)p.append(document.createElement('br'));p.append(document.createTextNode(line))});root.append(p)}}
+}).catch(()=>{document.getElementById('legalStatus').textContent='No pudimos cargar los documentos. Inténtalo de nuevo más tarde.'});

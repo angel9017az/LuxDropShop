@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080808"><meta name="description" content="Producto de LuxDropShop: tecnología y lujo, en un solo lugar.">
+  <title>Producto — LuxDropShop</title>
+  <link rel="preconnect" href="https://images.unsplash.com"><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <!-- Iconos SVG reutilizables (decorativos) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs><linearGradient id="crownGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd477"/><stop offset="1" stop-color="#b98729"/></linearGradient></defs>
+    <symbol id="i-crown" viewBox="0 0 48 40"><path d="M4 12l10 9 10-16 10 16 10-9-4 24H8L4 12z"/><circle cx="4" cy="10" r="3"/><circle cx="24" cy="4" r="3"/><circle cx="44" cy="10" r="3"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h8.8a1 1 0 0 0 1-.8L20 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l3 3v4h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 7.8-8 9-4.6-1.2-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 4h12l4 6-10 11L2 10l4-6z"/><path d="M2 10h20M9 4l3 6 3-6M12 21l-3-11M12 21l3-11"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19c0 1.5-2 2.5-5 2.5"/></symbol>
+  </svg>
+
+  <div class="announcement"><span>LUJO PARA TODOS LOS DÍAS</span><i></i><span>Tecnología · accesorios · fragancias</span><a href="/#productos">Descubre la colección ↗</a></div>
+  <header class="topbar"><a class="brand" href="/#inicio"><span class="crown"><svg aria-hidden="true"><use href="#i-crown"/></svg></span><span><b>LuxDrop</b>Shop</span></a>
+    <div class="search-wrap"><label class="search"><span><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg></span><input id="search" placeholder="Buscar productos..." aria-label="Buscar productos" autocomplete="off"></label><div class="search-suggest" id="searchSuggest" role="listbox" aria-label="Sugerencias de búsqueda" hidden></div></div>
+    <div class="header-actions"><button class="icon-btn" id="accountBtn" aria-label="Mi cuenta"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></button><button class="icon-btn favorite-trigger" id="favoritesBtn" aria-label="Mis favoritos">♡<i id="favoritesCount">0</i></button><button class="icon-btn cart-trigger" id="cartBtn" aria-label="Carrito"><svg class="ic" aria-hidden="true"><use href="#i-cart"/></svg><i id="cartCount">0</i></button><button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button></div>
+  </header>
+  <nav class="nav" id="nav"><a href="/#inicio">Inicio</a><a href="/#categoryTitle">Colecciones</a><a href="/#productos" class="active">Tienda</a><a href="/#ofertas">Destacados</a><a href="/#contacto">Contacto</a></nav>
+  <main class="pdp-page"><div id="pdp" aria-live="polite"><div class="pdp-loading" aria-hidden="true"></div></div></main>
+  <footer id="contacto"><div class="footer-main"><div class="footer-brand"><a class="brand" href="/#inicio"><span class="crown"><svg aria-hidden="true"><use href="#i-crown"/></svg></span><span><b>LuxDrop</b>Shop</span></a><p>Tecnología y lujo,<br>en un solo lugar.</p></div><div><h3>Explorar</h3><a href="/#productos">Productos</a><a href="/#ofertas">Ofertas</a></div><div><h3>Atención</h3><span>Contacto por configurar</span><a href="/account.html">Mi cuenta</a><a href="/tracking.html">Seguimiento de pedido</a></div><div><h3>Información</h3><a href="/legal.html#privacidad">Aviso de privacidad</a><a href="/legal.html#terminos">Términos y condiciones</a><a href="/legal.html#envios">Envíos y devoluciones</a><a href="/legal.html#garantias">Garantías y cancelaciones</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> LuxDropShop</span><span>Datos del proveedor y políticas pendientes de configuración</span><span><a href="/admin.html" rel="nofollow">Administración</a> · Hecho con cuidado <b>✦</b></span></div></footer>
+
+  <div class="scrim" id="scrim"></div><aside class="drawer" id="cartDrawer"><div class="drawer-head"><div><span class="eyebrow">TU SELECCIÓN</span><h2>Mi carrito <small id="drawerItems">(0)</small></h2></div><button class="close" data-close>×</button></div><div class="cart-items" id="cartItems"></div><div class="cart-empty" id="cartEmpty"><span class="cart-empty-icon" aria-hidden="true"><svg class="ic"><use href="#i-cart"/></svg></span><b>Tu carrito está esperando</b><p>Descubre algo que te encante.</p><button class="btn outline" data-close>Seguir explorando</button></div><div class="cart-summary" id="cartSummary"><h3 class="summary-title">Resumen de compra</h3><div><span>Subtotal</span><b id="subtotal">$0 MXN</b></div><div><span>Envío</span><span>Se calcula al confirmar</span></div><div class="total"><span>Total provisional</span><b id="total">$0 MXN</b></div><button class="btn gold full" id="checkoutBtn">Continuar al checkout →</button><button class="btn outline full" data-close>Seguir comprando</button><small>Los costos aplicables se mostrarán antes de confirmar el pedido.</small></div></aside>
+  <aside class="drawer favorites-drawer" id="favoritesDrawer" aria-label="Mis favoritos"><div class="drawer-head"><div><span class="eyebrow">TU LISTA PERSONAL</span><h2>Favoritos <small id="favoritesDrawerCount">(0)</small></h2></div><button class="close" data-favorites-close aria-label="Cerrar favoritos">×</button></div><p class="favorites-intro">Guarda aquí los productos que quieres volver a ver.</p><div class="favorites-items" id="favoritesItems"></div><div class="favorites-empty" id="favoritesEmpty"><span>♡</span><b>Aún no guardas favoritos</b><p>Usa el corazón de un producto para añadirlo a esta lista.</p><button class="btn outline" data-favorites-close>Explorar productos</button></div></aside>
+
+  <dialog id="checkoutDialog" class="modal checkout-modal"><button class="close modal-close" data-dialog-close>×</button><span class="eyebrow">ÚLTIMO PASO</span><h2>Finaliza tu pedido</h2>
+    <div class="steps"><b class="step on"><em>1</em>Contacto</b><i></i><span class="step on"><em>2</em>Envío</span><i></i><span class="step"><em>3</em>Pago</span><i></i><span class="step"><em>4</em>Confirmación</span></div>
+    <form id="checkoutForm" class="checkout-layout">
+      <div class="checkout-main">
+        <h3 class="block-title">Contacto</h3>
+        <div class="form-grid"><label class="wide">Correo electrónico<input name="email" type="email" required autocomplete="email" placeholder="tu@correo.com"></label><label>Nombre<input name="firstName" required autocomplete="given-name"></label><label>Apellidos<input name="lastName" required autocomplete="family-name"></label><label class="wide">Teléfono<input name="phone" type="tel" required autocomplete="tel"></label></div>
+        <h3 class="block-title">Dirección de envío</h3>
+        <div class="form-grid"><label class="wide">Dirección<input name="address" required autocomplete="street-address"></label><label>Colonia<input name="neighborhood" required></label><label>Código postal<input name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" required autocomplete="postal-code"></label><label>Ciudad<input name="city" required autocomplete="address-level2"></label><label>Estado<input name="state" required autocomplete="address-level1"></label></div>
+        <label class="checkline"><input type="checkbox" name="termsAccepted" required> He revisado y acepto los <a href="/#legal">términos y condiciones</a>.</label>
+        <label class="checkline"><input type="checkbox" name="marketingConsent"> Deseo recibir novedades comerciales. (Opcional)</label>
+      </div>
+      <aside class="checkout-aside">
+        <h3 class="block-title">Resumen</h3>
+        <div class="checkout-info"><b>Envío y pago no habilitados</b><p>El pedido se registra en el backend como pendiente. El negocio debe configurar tarifas de envío y métodos de pago; este sitio no procesará cobros.</p></div>
+        <div class="checkout-total"><span>Total provisional, sin envío</span><b id="checkoutTotal">$0 MXN</b></div>
+        <p id="checkoutError" class="admin-message" role="alert"></p>
+        <button class="btn gold full" type="submit">Registrar pedido pendiente →</button>
+      </aside>
+    </form>
+  </dialog>
+
+  <dialog id="accountDialog" class="modal account-modal"><button class="close modal-close" data-dialog-close>×</button><span class="eyebrow">LUXDROPSHOP</span><h2>Tu espacio personal</h2><p>Accede a tus pedidos y seguimiento desde tu cuenta.</p><div class="account-links"><a href="/account.html">Mis pedidos <span>→</span></a><a href="/tracking.html">Seguimiento de pedido <span>→</span></a></div><a class="btn gold full" href="/account.html">Iniciar sesión / Crear cuenta →</a></dialog>
+
+  <dialog id="confirmationDialog" class="modal confirmation-modal"><span class="confirm-icon">✓</span><span class="eyebrow">PEDIDO REGISTRADO</span><h2>Gracias por elegir LuxDropShop.</h2><p id="confirmationText"></p><div class="pending-note">Estado: <b>Pendiente de pago y configuración</b><br>Este pedido no ha sido cobrado. El negocio debe habilitar los medios de pago para operar.</div><button class="btn gold" data-dialog-close>Volver a la tienda</button></dialog>
+  <div class="toast" id="toast" role="status"></div><script src="/app.js"></script><script src="/producto.js"></script><script src="/cookie-consent.js"></script>
+</body></html>
